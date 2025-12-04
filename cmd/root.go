@@ -4,6 +4,8 @@ import (
 	"os"
 
 	"github.com/cwmiller/advent-of-code-2025/day1"
+	"github.com/cwmiller/advent-of-code-2025/day2"
+
 	"github.com/spf13/cobra"
 )
 
@@ -22,6 +24,13 @@ var day1Cmd = &cobra.Command{
 	Short: "Day 1: Secret Entrance",
 	Args:  cobra.ExactArgs(1),
 	Run:   day1.Run,
+}
+
+var day2Cmd = &cobra.Command{
+	Use:   "day2 [input file]",
+	Short: "Day 2: Gift Shop",
+	Args:  cobra.ExactArgs(1),
+	Run:   day2.Run,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -45,4 +54,5 @@ func init() {
 	//rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
 	rootCmd.AddCommand(day1Cmd)
+	rootCmd.AddCommand(day2Cmd)
 }
