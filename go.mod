@@ -2,7 +2,10 @@ module github.com/cwmiller/advent-of-code-2025
 
 go 1.24.0
 
-require github.com/spf13/cobra v1.10.1
+require (
+	github.com/dominikbraun/graph v0.23.0
+	github.com/spf13/cobra v1.10.1
+)
 
 require (
 	github.com/google/uuid v1.6.0

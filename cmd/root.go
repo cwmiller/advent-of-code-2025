@@ -4,6 +4,7 @@ import (
 	"os"
 
 	"github.com/cwmiller/advent-of-code-2025/day1"
+	"github.com/cwmiller/advent-of-code-2025/day10"
 	"github.com/cwmiller/advent-of-code-2025/day2"
 	"github.com/cwmiller/advent-of-code-2025/day3"
 	"github.com/cwmiller/advent-of-code-2025/day4"
@@ -89,6 +90,13 @@ var day9Cmd = &cobra.Command{
 	Run:   day9.Run,
 }
 
+var day10Cmd = &cobra.Command{
+	Use:   "day10 [input file]",
+	Short: "Day 10: Factory",
+	Args:  cobra.ExactArgs(1),
+	Run:   day10.Run,
+}
+
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
@@ -118,4 +126,5 @@ func init() {
 	rootCmd.AddCommand(day7Cmd)
 	rootCmd.AddCommand(day8Cmd)
 	rootCmd.AddCommand(day9Cmd)
+	rootCmd.AddCommand(day10Cmd)
 }
